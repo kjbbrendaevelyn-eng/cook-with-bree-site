@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-50 text-warm-brown antialiased;
+  }
+}
+
+@layer components {
+  .prose-recipe h2 {
+    @apply font-display text-2xl text-warm-brown mt-10 mb-4 pb-2 border-b border-cream-200;
+  }
+
+  .prose-recipe h3 {
+    @apply font-display text-lg text-terracotta-600 mt-6 mb-2;
+  }
+
+  .prose-recipe ul {
+    @apply list-none space-y-2 my-4;
+  }
+
+  .prose-recipe ul li {
+    @apply flex items-start gap-2 text-warm-muted;
+  }
+
+  .prose-recipe ul li::before {
+    content: "•";
+    @apply text-terracotta-500 font-bold shrink-0;
+  }
+
+  .prose-recipe ol {
+    @apply list-decimal list-inside space-y-3 my-4 text-warm-muted;
+  }
+
+  .prose-recipe p {
+    @apply text-warm-muted leading-relaxed my-4;
+  }
+
+  .prose-story p {
+    @apply text-warm-muted leading-relaxed my-5 text-lg;
+  }
+
+  .prose-story h2 {
+    @apply font-display text-2xl text-warm-brown mt-10 mb-4;
+  }
+}
