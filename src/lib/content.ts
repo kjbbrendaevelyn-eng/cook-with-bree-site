@@ -17,6 +17,34 @@ export interface RecipeFrontmatter {
   tags: string[];
   featured?: boolean;
   emoji?: string;
+  image?: string;
+}
+
+const RECIPE_IMAGE_DIR = path.join(process.cwd(), "public/images/recipes");
+const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp"];
+const IMAGE_NAMES = ["cover", "hero"];
+
+export function getRecipeImagePath(slug: string, image?: string): string | null {
+  if (image) {
+    const customPath = path.join(RECIPE_IMAGE_DIR, slug, image);
+    if (fs.existsSync(customPath)) {
+      return `/images/recipes/${slug}/${image}`;
+    }
+  }
+
+  const recipeDir = path.join(RECIPE_IMAGE_DIR, slug);
+  if (!fs.existsSync(recipeDir)) return null;
+
+  for (const name of IMAGE_NAMES) {
+    for (const ext of IMAGE_EXTENSIONS) {
+      const filename = `${name}${ext}`;
+      if (fs.existsSync(path.join(recipeDir, filename))) {
+        return `/images/recipes/${slug}/${filename}`;
+      }
+    }
+  }
+
+  return null;
 }
 
 export interface StoryFrontmatter {
@@ -31,6 +59,7 @@ export interface StoryFrontmatter {
 export interface Recipe extends RecipeFrontmatter {
   slug: string;
   content: string;
+  imagePath: string | null;
 }
 
 export interface Story extends StoryFrontmatter {
@@ -59,11 +88,13 @@ export async function getAllRecipes(): Promise<Recipe[]> {
       const fullPath = path.join(contentDirectory, "recipes", `${slug}.md`);
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data, content } = matter(fileContents);
+      const frontmatter = data as RecipeFrontmatter;
       const htmlContent = await markdownToHtml(content);
       return {
         slug,
-        ...(data as RecipeFrontmatter),
+        ...frontmatter,
         content: htmlContent,
+        imagePath: getRecipeImagePath(slug, frontmatter.image),
       };
     })
   );
@@ -77,11 +108,13 @@ export async function getRecipeBySlug(slug: string): Promise<Recipe | null> {
   if (!fs.existsSync(fullPath)) return null;
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
+  const frontmatter = data as RecipeFrontmatter;
   const htmlContent = await markdownToHtml(content);
   return {
     slug,
-    ...(data as RecipeFrontmatter),
+    ...frontmatter,
     content: htmlContent,
+    imagePath: getRecipeImagePath(slug, frontmatter.image),
   };
 }
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllRecipes, getRecipeBySlug, formatDate } from "@/lib/content";
 
@@ -37,8 +38,26 @@ export default async function RecipePage({ params }: Props) {
       </Link>
 
       <header className="mt-8">
+        {recipe.imagePath ? (
+          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-8">
+            <Image
+              src={recipe.imagePath}
+              alt={recipe.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+              priority
+            />
+          </div>
+        ) : (
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-5xl">{recipe.emoji || "🍽️"}</span>
+          </div>
+        )}
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-5xl">{recipe.emoji || "🍽️"}</span>
+          {recipe.imagePath && (
+            <span className="text-3xl">{recipe.emoji || "🍽️"}</span>
+          )}
           <span className="text-xs font-medium text-terracotta-600 uppercase tracking-wide">
             {recipe.category}
           </span>

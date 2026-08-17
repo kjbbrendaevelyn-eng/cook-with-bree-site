@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Recipe } from "@/lib/content";
 import { formatDate } from "@/lib/content";
 
@@ -12,10 +13,20 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
       href={`/recipes/${recipe.slug}`}
       className="group block bg-white rounded-2xl border border-cream-200 overflow-hidden hover:shadow-lg hover:border-terracotta-400/30 transition-all duration-300"
     >
-      <div className="h-48 bg-gradient-to-br from-terracotta-400/20 to-sage-400/20 flex items-center justify-center">
-        <span className="text-6xl group-hover:scale-110 transition-transform duration-300">
-          {recipe.emoji || "🍽️"}
-        </span>
+      <div className="relative h-48 bg-gradient-to-br from-terracotta-400/20 to-sage-400/20 flex items-center justify-center overflow-hidden">
+        {recipe.imagePath ? (
+          <Image
+            src={recipe.imagePath}
+            alt={recipe.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+        ) : (
+          <span className="text-6xl group-hover:scale-110 transition-transform duration-300">
+            {recipe.emoji || "🍽️"}
+          </span>
+        )}
       </div>
       <div className="p-6">
         <div className="flex items-center gap-2 mb-2">

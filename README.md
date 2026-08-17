@@ -53,6 +53,17 @@ Your personal tips and stories about this recipe.
 
 The filename becomes the URL slug (e.g., `my-recipe.md` → `/recipes/my-recipe`).
 
+### Recipe Photos
+
+Add images in `public/images/recipes/<slug>/`:
+
+```
+public/images/recipes/lemon-garlic-pasta/cover.jpg
+public/images/recipes/grandmas-banana-bread/cover.jpg
+```
+
+Name your main photo **`cover.jpg`** (or `.png`, `.webp`). It appears on recipe cards and the recipe page automatically. See `public/images/recipes/README.md` for full details.
+
 ### New Story
 
 Create a markdown file in `content/stories/`:
