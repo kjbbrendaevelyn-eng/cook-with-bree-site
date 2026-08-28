@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   },
   description:
     "Recipes and stories from Bree's kitchen — warm, home-cooked meals and the memories that come with them.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
