@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -10,7 +11,16 @@ export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-12">
       <div className="text-center mb-12">
-        <span className="text-7xl">👩‍🍳</span>
+        <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden border-4 border-cream-200 shadow-lg">
+          <Image
+            src="/images/about/bree.jpg"
+            alt="Bree in chef's whites"
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 768px) 192px, 224px"
+            priority
+          />
+        </div>
         <h1 className="font-display text-4xl md:text-5xl text-warm-brown mt-6">
           Hi, I&apos;m Bree
         </h1>
