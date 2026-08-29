@@ -1,7 +1,6 @@
 export const socialLinks = {
   youtube: "https://www.youtube.com/@Cook-with-Bree",
-  // TODO: add URLs when available
-  instagram: "",
+  instagram: "https://www.instagram.com/cook.with.bree",
   tiktok: "",
 } as const;
 

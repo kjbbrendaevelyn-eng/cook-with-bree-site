@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import SocialLinks from "@/components/SocialLinks";
+import SocialQrCodes from "@/components/SocialQrCodes";
 
 export const metadata: Metadata = {
   title: "About",
@@ -58,6 +59,7 @@ export default function AboutPage() {
         <p className="font-display text-xl text-warm-brown">Follow along</p>
         <p className="text-warm-muted mt-2">Find me on social for more recipes and kitchen moments.</p>
         <SocialLinks className="justify-center mt-5" showLabels />
+        <SocialQrCodes className="mt-8" />
         <p className="font-display text-xl text-warm-brown mt-10">Ready to cook?</p>
         <p className="text-warm-muted mt-2">Start with one of my favorite recipes.</p>
         <div className="flex flex-wrap justify-center gap-4 mt-6">
