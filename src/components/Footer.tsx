@@ -13,12 +13,15 @@ export default function Footer() {
             </p>
             <SocialLinks className="mt-4" iconSize="sm" />
           </div>
-          <div className="flex gap-6 text-sm text-warm-muted">
+          <div className="flex flex-wrap gap-6 text-sm text-warm-muted">
             <Link href="/recipes" className="hover:text-terracotta-600 transition-colors">
               Recipes
             </Link>
             <Link href="/stories" className="hover:text-terracotta-600 transition-colors">
               Stories
+            </Link>
+            <Link href="/meal-plans" className="hover:text-terracotta-600 transition-colors">
+              Meal Plans
             </Link>
             <Link href="/about" className="hover:text-terracotta-600 transition-colors">
               About

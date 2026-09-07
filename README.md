@@ -81,6 +81,24 @@ emoji: "📖"
 Your story content here. Write in plain markdown.
 ```
 
+### Printable Meal Plans (Shop)
+
+Meal plans live in `src/lib/meal-plans.ts`. Each plan has a **Buy** button that opens an external checkout URL (Stripe Payment Link, Gumroad, Lemon Squeezy, etc.). After payment, that platform delivers the printable PDF.
+
+1. Create your PDF meal plan.
+2. Create a product in Stripe/Gumroad and enable file download after purchase.
+3. Paste the checkout URL into `purchaseUrl` for that plan in `src/lib/meal-plans.ts`.
+
+```ts
+purchaseUrl: "https://buy.stripe.com/your-payment-link",
+```
+
+Until `purchaseUrl` is set, the button shows **Coming soon**.
+
+Pages:
+- `/meal-plans` — shop listing
+- `/meal-plans/<slug>` — plan detail + buy button
+
 ## Project Structure
 
 ```
@@ -88,9 +106,9 @@ content/
   recipes/     # Recipe markdown files
   stories/     # Story markdown files
 src/
-  app/         # Next.js pages
+  app/         # Next.js pages (includes meal-plans/)
   components/  # Reusable UI components
-  lib/         # Content parsing utilities
+  lib/         # Content parsing + meal-plans catalog
 ```
 
 ## Deploy
@@ -109,3 +127,4 @@ Or connect your GitHub repo to Vercel for automatic deploys on every push.
 - **Tailwind CSS** — Styling
 - **Markdown** — Content authoring
 - **gray-matter + remark** — Markdown parsing
+- **External checkout links** — Stripe / Gumroad for printable meal plan sales
