@@ -2,12 +2,15 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import RecipeCard from "@/components/RecipeCard";
 import StoryCard from "@/components/StoryCard";
+import MealPlanCard from "@/components/MealPlanCard";
 import { getAllRecipes, getAllStories } from "@/lib/content";
+import { getFeaturedMealPlans } from "@/lib/meal-plans";
 
 export default async function HomePage() {
   const [recipes, stories] = await Promise.all([getAllRecipes(), getAllStories()]);
   const featuredRecipes = recipes.filter((r) => r.featured).slice(0, 3);
   const featuredStories = stories.filter((s) => s.featured).slice(0, 2);
+  const featuredPlans = getFeaturedMealPlans().slice(0, 2);
 
   return (
     <>
@@ -52,6 +55,26 @@ export default async function HomePage() {
               <StoryCard key={story.slug} story={story} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <h2 className="font-display text-3xl text-warm-brown">Printable Meal Plans</h2>
+            <p className="text-warm-muted mt-1">Buy once, print anytime</p>
+          </div>
+          <Link
+            href="/meal-plans"
+            className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors"
+          >
+            Shop all →
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {featuredPlans.map((plan) => (
+            <MealPlanCard key={plan.slug} plan={plan} />
+          ))}
         </div>
       </section>
 
