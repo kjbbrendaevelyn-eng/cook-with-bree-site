@@ -1,12 +1,32 @@
 import { formatPrice, type MealPlan } from "@/lib/meal-plans";
+import { formatEbookPrice, type Ebook } from "@/lib/ebooks";
+
+type BuyProduct =
+  | { kind: "meal-plan"; product: MealPlan }
+  | { kind: "ebook"; product: Ebook };
 
 interface BuyButtonProps {
-  plan: MealPlan;
+  product: BuyProduct;
   className?: string;
 }
 
-export default function BuyButton({ plan, className = "" }: BuyButtonProps) {
-  const ready = Boolean(plan.purchaseUrl.trim());
+export default function BuyButton({ product, className = "" }: BuyButtonProps) {
+  const { purchaseUrl, priceLabel, ctaLabel, footnote } =
+    product.kind === "meal-plan"
+      ? {
+          purchaseUrl: product.product.purchaseUrl,
+          priceLabel: formatPrice(product.product),
+          ctaLabel: `Buy printable plan — ${formatPrice(product.product)}`,
+          footnote: "Secure checkout · Instant PDF download after purchase",
+        }
+      : {
+          purchaseUrl: product.product.purchaseUrl,
+          priceLabel: formatEbookPrice(product.product),
+          ctaLabel: `Buy & download ebook — ${formatEbookPrice(product.product)}`,
+          footnote: "Secure checkout · Instant PDF download after purchase",
+        };
+
+  const ready = Boolean(purchaseUrl.trim());
 
   if (!ready) {
     return (
@@ -16,7 +36,7 @@ export default function BuyButton({ plan, className = "" }: BuyButtonProps) {
           disabled
           className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full text-sm font-medium bg-cream-200 text-warm-muted cursor-not-allowed"
         >
-          Coming soon — {formatPrice(plan)}
+          Coming soon — {priceLabel}
         </button>
         <p className="text-xs text-warm-muted mt-2 text-center">
           Purchase link will be available shortly.
@@ -28,16 +48,14 @@ export default function BuyButton({ plan, className = "" }: BuyButtonProps) {
   return (
     <div className={className}>
       <a
-        href={plan.purchaseUrl}
+        href={purchaseUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full text-sm font-medium bg-terracotta-500 text-white hover:bg-terracotta-600 transition-colors"
       >
-        Buy printable plan — {formatPrice(plan)}
+        {ctaLabel}
       </a>
-      <p className="text-xs text-warm-muted mt-2 text-center">
-        Secure checkout · Instant PDF download after purchase
-      </p>
+      <p className="text-xs text-warm-muted mt-2 text-center">{footnote}</p>
     </div>
   );
 }

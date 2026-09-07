@@ -7,11 +7,14 @@
     "dev:fresh": "sh -c 'lsof -ti:3000 | xargs kill -9 2>/dev/null; rm -rf .next; next dev --turbopack'",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ebook:generate": "node scripts/generate-ebook.mjs",
+    "ebook:stripe": "node --env-file=.env.local scripts/create-stripe-ebook-product.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "next": "^15.1.0",
+    "pdfkit": "^0.20.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "remark": "^15.0.1",
@@ -20,6 +23,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.10.0",
+    "@types/pdfkit": "^0.17.6",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.16.0",

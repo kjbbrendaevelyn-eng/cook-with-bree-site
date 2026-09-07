@@ -99,6 +99,22 @@ Pages:
 - `/meal-plans` — shop listing
 - `/meal-plans/<slug>` — plan detail + buy button
 
+### Downloadable Ebooks
+
+Ebooks live in `src/lib/ebooks.ts`. Same checkout pattern as meal plans — paste a Stripe/Gumroad link into `purchaseUrl` so buyers get an instant PDF download.
+
+Generate / refresh the ebook PDF:
+
+```bash
+npm run ebook:generate
+```
+
+Output: `products/ebooks/from-buziga-with-love.pdf` — upload this file to your Stripe/Gumroad product (keep it out of `public/` so it isn’t free).
+
+Pages:
+- `/ebooks` — ebook listing
+- `/ebooks/<slug>` — ebook detail + buy & download button
+
 ## Project Structure
 
 ```
@@ -106,9 +122,9 @@ content/
   recipes/     # Recipe markdown files
   stories/     # Story markdown files
 src/
-  app/         # Next.js pages (includes meal-plans/)
+  app/         # Next.js pages (includes meal-plans/ and ebooks/)
   components/  # Reusable UI components
-  lib/         # Content parsing + meal-plans catalog
+  lib/         # Content parsing + meal-plans + ebooks catalogs
 ```
 
 ## Deploy
@@ -127,4 +143,4 @@ Or connect your GitHub repo to Vercel for automatic deploys on every push.
 - **Tailwind CSS** — Styling
 - **Markdown** — Content authoring
 - **gray-matter + remark** — Markdown parsing
-- **External checkout links** — Stripe / Gumroad for printable meal plan sales
+- **External checkout links** — Stripe / Gumroad for printable meal plans and ebooks
