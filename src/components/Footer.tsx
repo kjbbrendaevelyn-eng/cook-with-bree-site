@@ -23,6 +23,9 @@ export default function Footer() {
             <Link href="/meal-plans" className="hover:text-terracotta-600 transition-colors">
               Meal Plans
             </Link>
+            <Link href="/ebooks" className="hover:text-terracotta-600 transition-colors">
+              Ebooks
+            </Link>
             <Link href="/about" className="hover:text-terracotta-600 transition-colors">
               About
             </Link>

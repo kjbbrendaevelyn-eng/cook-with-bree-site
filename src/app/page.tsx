@@ -3,14 +3,17 @@ import Hero from "@/components/Hero";
 import RecipeCard from "@/components/RecipeCard";
 import StoryCard from "@/components/StoryCard";
 import MealPlanCard from "@/components/MealPlanCard";
+import EbookCard from "@/components/EbookCard";
 import { getAllRecipes, getAllStories } from "@/lib/content";
 import { getFeaturedMealPlans } from "@/lib/meal-plans";
+import { getFeaturedEbooks } from "@/lib/ebooks";
 
 export default async function HomePage() {
   const [recipes, stories] = await Promise.all([getAllRecipes(), getAllStories()]);
   const featuredRecipes = recipes.filter((r) => r.featured).slice(0, 3);
   const featuredStories = stories.filter((s) => s.featured).slice(0, 2);
   const featuredPlans = getFeaturedMealPlans().slice(0, 2);
+  const featuredEbooks = getFeaturedEbooks().slice(0, 1);
 
   return (
     <>
@@ -77,6 +80,30 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
+
+      {featuredEbooks.length > 0 && (
+        <section className="bg-cream-100/50 border-y border-cream-200">
+          <div className="max-w-5xl mx-auto px-6 py-16">
+            <div className="flex items-end justify-between mb-8">
+              <div>
+                <h2 className="font-display text-3xl text-warm-brown">Downloadable Ebook</h2>
+                <p className="text-warm-muted mt-1">Stories and recipes in one PDF</p>
+              </div>
+              <Link
+                href="/ebooks"
+                className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors"
+              >
+                Shop ebooks →
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {featuredEbooks.map((book) => (
+                <EbookCard key={book.slug} book={book} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="max-w-5xl mx-auto px-6 py-16 text-center">
         <span className="text-5xl">👩‍🍳</span>
