@@ -42,7 +42,7 @@ export const mealPlans: MealPlan[] = [
       "Make-ahead and leftover tips",
       "Links to matching Cook with Bree recipes",
     ],
-    purchaseUrl: "",
+    purchaseUrl: "https://brendaevy.gumroad.com/l/Easy-African-Inspired-Dinners",
   },
   {
     slug: "special-dinner",
@@ -63,7 +63,7 @@ export const mealPlans: MealPlan[] = [
       "Printable shopping list",
       "Make-ahead tips so you're not stuck in the kitchen all evening",
     ],
-    purchaseUrl: "",
+    purchaseUrl: "https://brendaevy.gumroad.com/l/special-dinner",
   },
   {
     slug: "romantic-ugandan-dinner",
@@ -84,7 +84,7 @@ export const mealPlans: MealPlan[] = [
       "Printable shopping list",
       "Table-setting and serving notes",
     ],
-    purchaseUrl: "",
+    purchaseUrl: "https://brendaevy.gumroad.com/l/romantic-dinner-ideas",
   },
 ];
 
