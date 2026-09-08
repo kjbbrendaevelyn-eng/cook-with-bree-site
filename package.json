@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "ebook:generate": "node scripts/generate-ebook.mjs",
-    "ebook:stripe": "node --env-file=.env.local scripts/create-stripe-ebook-product.mjs"
+    "ebook:stripe": "node --env-file=.env.local scripts/create-stripe-ebook-product.mjs",
+    "mealplans:generate": "node scripts/generate-meal-plans.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
