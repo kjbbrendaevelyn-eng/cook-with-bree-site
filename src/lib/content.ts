@@ -3,6 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+// Imported so new markdown files change the module graph and invalidate Vercel/Next build cache.
+import { contentManifest } from "@/lib/content-manifest";
 
 const contentDirectory = path.join(process.cwd(), "content");
 
@@ -72,13 +74,16 @@ async function markdownToHtml(markdown: string): Promise<string> {
   return result.toString();
 }
 
-function getSlugs(dir: string): string[] {
+function getSlugs(dir: "recipes" | "stories"): string[] {
+  const fromManifest = contentManifest[dir];
   const fullPath = path.join(contentDirectory, dir);
-  if (!fs.existsSync(fullPath)) return [];
-  return fs
+  if (!fs.existsSync(fullPath)) return [...fromManifest];
+  const fromDisk = fs
     .readdirSync(fullPath)
     .filter((file) => file.endsWith(".md"))
     .map((file) => file.replace(/\.md$/, ""));
+  // Prefer disk at runtime/dev; fall back to manifest if tracing missed a file.
+  return fromDisk.length > 0 ? fromDisk : [...fromManifest];
 }
 
 export async function getAllRecipes(): Promise<Recipe[]> {
