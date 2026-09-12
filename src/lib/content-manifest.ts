@@ -21,6 +21,7 @@ export const contentManifest = {
   "growing-up-in-uganda",
   "my-parents-love",
   "my-sister-salma",
+  "thirty-days",
   "through-the-ceiling",
   "why-i-cook"
 ],
