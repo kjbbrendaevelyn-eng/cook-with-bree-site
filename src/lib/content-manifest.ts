@@ -3,6 +3,7 @@ export const contentManifest = {
   recipes: [
   "brioche-bread",
   "chapati",
+  "chicken-tikka-masala",
   "coconut-rice",
   "cozy-chicken-soup",
   "english-peas-stew",
