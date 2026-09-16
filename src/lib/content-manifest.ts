@@ -18,6 +18,7 @@ export const contentManifest = {
   "sandwich-bread"
 ],
   stories: [
+  "a-day-later",
   "chapati-and-rolex",
   "first-kitchen-memory",
   "growing-up-in-uganda",
