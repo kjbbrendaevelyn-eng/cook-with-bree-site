@@ -16,7 +16,8 @@ export const contentManifest = {
   "one-pot-chicken-alfredo-pasta",
   "pork-curry",
   "roasted-beef-luwombo",
-  "sandwich-bread"
+  "sandwich-bread",
+  "stir-fried-pork-with-cabbage"
 ],
   stories: [
   "a-day-later",
