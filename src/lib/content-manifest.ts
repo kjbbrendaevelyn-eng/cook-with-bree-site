@@ -14,9 +14,11 @@ export const contentManifest = {
   "matooke-with-groundnut-sauce",
   "mushroom-sauce",
   "one-pot-chicken-alfredo-pasta",
+  "pan-made-pizza",
   "pork-curry",
   "roasted-beef-luwombo",
-  "sandwich-bread"
+  "sandwich-bread",
+  "stir-fried-pork-with-cabbage"
 ],
   stories: [
   "a-day-later",
