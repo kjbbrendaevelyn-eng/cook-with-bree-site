@@ -14,6 +14,7 @@ export const contentManifest = {
   "matooke-with-groundnut-sauce",
   "mushroom-sauce",
   "one-pot-chicken-alfredo-pasta",
+  "pan-made-pizza",
   "pork-curry",
   "roasted-beef-luwombo",
   "sandwich-bread",
