@@ -25,6 +25,7 @@ export const contentManifest = {
   "chapati-and-rolex",
   "first-kitchen-memory",
   "growing-up-in-uganda",
+  "living-with-my-cousin",
   "my-parents-love",
   "my-sister-salma",
   "thirty-days",
