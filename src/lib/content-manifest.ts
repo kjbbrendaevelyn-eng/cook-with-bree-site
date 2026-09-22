@@ -16,6 +16,7 @@ export const contentManifest = {
   "one-pot-chicken-alfredo-pasta",
   "pan-made-pizza",
   "pork-curry",
+  "red-velvet-cake",
   "roasted-beef-luwombo",
   "sandwich-bread",
   "stir-fried-pork-with-cabbage"
