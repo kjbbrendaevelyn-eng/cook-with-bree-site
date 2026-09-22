@@ -7,6 +7,7 @@ export const contentManifest = {
   "chicken-tikka-masala",
   "coconut-rice",
   "cozy-chicken-soup",
+  "croissants",
   "english-peas-stew",
   "grandmas-banana-bread",
   "honey-roasted-vegetables",
