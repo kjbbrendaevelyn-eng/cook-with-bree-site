@@ -3,12 +3,12 @@ import ToolCard from "@/components/ToolCard";
 import { getToolsByCategory } from "@/lib/tools";
 
 export const metadata: Metadata = {
-  title: "Favorite Tools",
+  title: "My Kitchen",
   description:
     "Bree’s favorite baking and cooking tools — the pans, knives, and everyday gear behind Cook with Bree recipes.",
 };
 
-export default function ToolsPage() {
+export default function MyKitchenPage() {
   const baking = getToolsByCategory("baking");
   const cooking = getToolsByCategory("cooking");
 
@@ -16,9 +16,9 @@ export default function ToolsPage() {
     <div className="max-w-5xl mx-auto px-6 py-12">
       <div className="mb-12 max-w-2xl">
         <p className="text-sm font-medium text-terracotta-600 uppercase tracking-widest mb-3">
-          Kitchen
+          Tools I love
         </p>
-        <h1 className="font-display text-4xl text-warm-brown">Favorite Tools</h1>
+        <h1 className="font-display text-4xl text-warm-brown">My Kitchen</h1>
         <p className="text-warm-muted mt-3 text-lg leading-relaxed">
           The gear I actually reach for — from croissant mornings to weeknight stews. Build your
           kitchen slowly; start with what helps you cook the food you love.

@@ -111,11 +111,11 @@ export default async function HomePage() {
       <section className="max-w-5xl mx-auto px-6 py-16">
         <div className="flex items-end justify-between mb-8">
           <div>
-            <h2 className="font-display text-3xl text-warm-brown">Favorite Tools</h2>
+            <h2 className="font-display text-3xl text-warm-brown">My Kitchen</h2>
             <p className="text-warm-muted mt-1">Baking and cooking gear I actually use</p>
           </div>
           <Link
-            href="/tools"
+            href="/my-kitchen"
             className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors"
           >
             View all →
