@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import RecipeShopCta from "@/components/RecipeShopCta";
 import { getAllRecipes, getRecipeBySlug, formatDate } from "@/lib/content";
 
 interface Props {
@@ -91,6 +92,8 @@ export default async function RecipePage({ params }: Props) {
         className="prose-recipe mt-10"
         dangerouslySetInnerHTML={{ __html: recipe.content }}
       />
+
+      <RecipeShopCta slug={recipe.slug} />
     </article>
   );
 }
