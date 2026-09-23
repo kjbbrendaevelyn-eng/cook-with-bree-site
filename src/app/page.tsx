@@ -4,9 +4,11 @@ import RecipeCard from "@/components/RecipeCard";
 import StoryCard from "@/components/StoryCard";
 import MealPlanCard from "@/components/MealPlanCard";
 import EbookCard from "@/components/EbookCard";
+import ToolCard from "@/components/ToolCard";
 import { getAllRecipes, getAllStories } from "@/lib/content";
 import { getFeaturedMealPlans } from "@/lib/meal-plans";
 import { getFeaturedEbooks } from "@/lib/ebooks";
+import { getFeaturedTools } from "@/lib/tools";
 
 export default async function HomePage() {
   const [recipes, stories] = await Promise.all([getAllRecipes(), getAllStories()]);
@@ -14,6 +16,7 @@ export default async function HomePage() {
   const featuredStories = stories.filter((s) => s.featured).slice(0, 2);
   const featuredPlans = getFeaturedMealPlans().slice(0, 2);
   const featuredEbooks = getFeaturedEbooks().slice(0, 1);
+  const featuredTools = getFeaturedTools().slice(0, 3);
 
   return (
     <>
@@ -104,6 +107,26 @@ export default async function HomePage() {
           </div>
         </section>
       )}
+
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <h2 className="font-display text-3xl text-warm-brown">Favorite Tools</h2>
+            <p className="text-warm-muted mt-1">Baking and cooking gear I actually use</p>
+          </div>
+          <Link
+            href="/tools"
+            className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors"
+          >
+            View all →
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {featuredTools.map((tool) => (
+            <ToolCard key={tool.slug} tool={tool} />
+          ))}
+        </div>
+      </section>
 
       <section className="max-w-5xl mx-auto px-6 py-16 text-center">
         <span className="text-5xl">👩‍🍳</span>
