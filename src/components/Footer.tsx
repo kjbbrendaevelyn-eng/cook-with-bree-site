@@ -26,6 +26,9 @@ export default function Footer() {
             <Link href="/ebooks" className="hover:text-terracotta-600 transition-colors">
               Ebooks
             </Link>
+            <Link href="/tools" className="hover:text-terracotta-600 transition-colors">
+              Tools
+            </Link>
             <Link href="/about" className="hover:text-terracotta-600 transition-colors">
               About
             </Link>
