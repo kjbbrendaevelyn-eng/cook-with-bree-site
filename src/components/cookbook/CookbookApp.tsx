@@ -184,7 +184,7 @@ export default function CookbookApp({ siteRecipes }: CookbookAppProps) {
       </div>
 
       <div
-        className="grid grid-cols-3 gap-1 sm:flex sm:flex-wrap sm:gap-2 border-b border-cream-200 pb-3 sm:pb-4 mb-6 sm:mb-8 sticky top-[calc(3.25rem+env(safe-area-inset-top))] sm:top-[calc(4.5rem+env(safe-area-inset-top))] z-30 -mx-4 px-4 sm:mx-0 sm:px-0 bg-cream-50/95 backdrop-blur-sm"
+        className="grid grid-cols-3 gap-1 sm:flex sm:flex-wrap sm:gap-2 border-b border-cream-200 pb-3 sm:pb-4 mb-6 sm:mb-8 sticky top-[calc(3.25rem+env(safe-area-inset-top))] sm:top-[calc(4.5rem+env(safe-area-inset-top))] z-30 bg-cream-50/95 backdrop-blur-sm"
       >
         {tabs.map((item) => (
           <button

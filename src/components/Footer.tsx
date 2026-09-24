@@ -4,16 +4,16 @@ import SocialLinks from "@/components/SocialLinks";
 export default function Footer() {
   return (
     <footer className="border-t border-cream-200 bg-cream-100 mt-auto">
-      <div className="max-w-5xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+        <div className="flex flex-col gap-8">
           <div>
             <p className="font-display text-xl text-warm-brown">Cook with Bree</p>
-            <p className="text-sm text-warm-muted mt-1">
+            <p className="text-sm text-warm-muted mt-1 max-w-md">
               Sharing the recipes and stories that fill my kitchen with love.
             </p>
             <SocialLinks className="mt-4" iconSize="sm" />
           </div>
-          <div className="flex flex-wrap gap-6 text-sm text-warm-muted">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap gap-x-4 gap-y-3 text-sm text-warm-muted">
             <Link href="/recipes" className="hover:text-terracotta-600 transition-colors">
               Recipes
             </Link>

@@ -30,10 +30,14 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="border-b border-cream-200 bg-cream-50/90 backdrop-blur-sm sticky top-0 z-50 pt-[env(safe-area-inset-top)]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-5 flex items-center justify-between gap-3">
-        <Link href="/" className="group min-w-0" onClick={() => setOpen(false)}>
-          <span className="font-display text-xl sm:text-2xl text-warm-brown group-hover:text-terracotta-600 transition-colors">
+    <header className="border-b border-cream-200 bg-cream-50/95 backdrop-blur-sm sticky top-0 z-50 pt-[env(safe-area-inset-top)] overflow-x-clip">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3 min-w-0">
+        <Link
+          href="/"
+          className="group min-w-0 flex-1 mr-2"
+          onClick={() => setOpen(false)}
+        >
+          <span className="font-display text-lg sm:text-2xl text-warm-brown group-hover:text-terracotta-600 transition-colors truncate block">
             Cook with Bree
           </span>
           <span className="hidden sm:block text-xs text-warm-muted tracking-widest uppercase mt-0.5">
@@ -41,7 +45,8 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+        {/* Inline nav only on very wide screens — 7 links overflow below this */}
+        <nav className="hidden min-[1200px]:flex items-center gap-4 shrink-0">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -55,20 +60,28 @@ export default function Header() {
 
         <button
           type="button"
-          className="lg:hidden inline-flex items-center justify-center min-h-11 min-w-11 rounded-full border border-cream-200 bg-white text-warm-brown"
+          className="min-[1200px]:hidden inline-flex items-center justify-center h-11 w-11 shrink-0 rounded-full border border-cream-200 bg-white text-warm-brown"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((value) => !value)}
         >
           <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-          <span className="flex flex-col gap-1.5" aria-hidden>
+          <span className="relative block h-4 w-5" aria-hidden>
             <span
-              className={`block h-0.5 w-5 bg-current transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
+              className={`absolute left-0 top-0 block h-0.5 w-5 bg-current transition-transform origin-center ${
+                open ? "translate-y-[7px] rotate-45" : ""
+              }`}
             />
-            <span className={`block h-0.5 w-5 bg-current transition-opacity ${open ? "opacity-0" : ""}`} />
             <span
-              className={`block h-0.5 w-5 bg-current transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
+              className={`absolute left-0 top-[7px] block h-0.5 w-5 bg-current transition-opacity ${
+                open ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-[14px] block h-0.5 w-5 bg-current transition-transform origin-center ${
+                open ? "-translate-y-[7px] -rotate-45" : ""
+              }`}
             />
           </span>
         </button>
@@ -77,9 +90,9 @@ export default function Header() {
       {open && (
         <div
           id="mobile-nav"
-          className="lg:hidden border-t border-cream-200 bg-cream-50 max-h-[min(80vh,calc(100dvh-4rem))] overflow-y-auto pb-[env(safe-area-inset-bottom)]"
+          className="min-[1200px]:hidden border-t border-cream-200 bg-cream-50 max-h-[min(80vh,calc(100dvh-4rem))] overflow-y-auto overflow-x-hidden pb-[env(safe-area-inset-bottom)]"
         >
-          <nav className="max-w-5xl mx-auto px-4 py-3 flex flex-col">
+          <nav className="max-w-5xl mx-auto px-4 py-2 flex flex-col">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
