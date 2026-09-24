@@ -1,0 +1,33 @@
+{
+  "name": "Cook with Bree",
+  "short_name": "Cook with Bree",
+  "description": "Recipes, stories, meal plans, and your personal cookbook from Bree's kitchen.",
+  "start_url": "/cookbook",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FDFBF7",
+  "theme_color": "#C4704B",
+  "lang": "en",
+  "categories": ["food", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
