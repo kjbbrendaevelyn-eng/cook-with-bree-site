@@ -7,8 +7,6 @@ const navLinks = [
   { href: "/recipes", label: "Recipes" },
   { href: "/stories", label: "Stories" },
   { href: "/cookbook", label: "Cookbook" },
-  { href: "/meal-plans", label: "Meal Plans" },
-  { href: "/ebooks", label: "Ebooks" },
   { href: "/my-kitchen", label: "My Kitchen" },
   { href: "/about", label: "About" },
 ];
@@ -45,8 +43,8 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Inline nav only on very wide screens — 7 links overflow below this */}
-        <nav className="hidden min-[1200px]:flex items-center gap-4 shrink-0">
+        {/* Inline nav on wider screens; hamburger below */}
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 shrink-0">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -60,7 +58,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="min-[1200px]:hidden inline-flex items-center justify-center h-11 w-11 shrink-0 rounded-full border border-cream-200 bg-white text-warm-brown"
+          className="lg:hidden inline-flex items-center justify-center h-11 w-11 shrink-0 rounded-full border border-cream-200 bg-white text-warm-brown"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -90,7 +88,7 @@ export default function Header() {
       {open && (
         <div
           id="mobile-nav"
-          className="min-[1200px]:hidden border-t border-cream-200 bg-cream-50 max-h-[min(80vh,calc(100dvh-4rem))] overflow-y-auto overflow-x-hidden pb-[env(safe-area-inset-bottom)]"
+          className="lg:hidden border-t border-cream-200 bg-cream-50 max-h-[min(80vh,calc(100dvh-4rem))] overflow-y-auto overflow-x-hidden pb-[env(safe-area-inset-bottom)]"
         >
           <nav className="max-w-5xl mx-auto px-4 py-2 flex flex-col">
             {navLinks.map((link) => (
