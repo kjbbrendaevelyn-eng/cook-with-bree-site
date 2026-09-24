@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const navLinks = [
@@ -11,29 +14,85 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <header className="border-b border-cream-200 bg-cream-50/80 backdrop-blur-sm sticky top-0 z-50">
-      <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
-        <Link href="/" className="group">
-          <span className="font-display text-2xl text-warm-brown group-hover:text-terracotta-600 transition-colors">
+    <header className="border-b border-cream-200 bg-cream-50/90 backdrop-blur-sm sticky top-0 z-50 pt-[env(safe-area-inset-top)]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-5 flex items-center justify-between gap-3">
+        <Link href="/" className="group min-w-0" onClick={() => setOpen(false)}>
+          <span className="font-display text-xl sm:text-2xl text-warm-brown group-hover:text-terracotta-600 transition-colors">
             Cook with Bree
           </span>
-          <span className="block text-xs text-warm-muted tracking-widest uppercase mt-0.5">
+          <span className="hidden sm:block text-xs text-warm-muted tracking-widest uppercase mt-0.5">
             Recipes & Stories
           </span>
         </Link>
-        <nav className="flex items-center gap-8">
+
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-warm-muted hover:text-terracotta-600 transition-colors"
+              className="text-sm font-medium text-warm-muted hover:text-terracotta-600 transition-colors whitespace-nowrap"
             >
               {link.label}
             </Link>
           ))}
         </nav>
+
+        <button
+          type="button"
+          className="lg:hidden inline-flex items-center justify-center min-h-11 min-w-11 rounded-full border border-cream-200 bg-white text-warm-brown"
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
+          <span className="flex flex-col gap-1.5" aria-hidden>
+            <span
+              className={`block h-0.5 w-5 bg-current transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
+            />
+            <span className={`block h-0.5 w-5 bg-current transition-opacity ${open ? "opacity-0" : ""}`} />
+            <span
+              className={`block h-0.5 w-5 bg-current transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
+            />
+          </span>
+        </button>
       </div>
+
+      {open && (
+        <div
+          id="mobile-nav"
+          className="lg:hidden border-t border-cream-200 bg-cream-50 max-h-[min(80vh,calc(100dvh-4rem))] overflow-y-auto pb-[env(safe-area-inset-bottom)]"
+        >
+          <nav className="max-w-5xl mx-auto px-4 py-3 flex flex-col">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="py-3.5 text-base font-medium text-warm-brown border-b border-cream-200 last:border-b-0 hover:text-terracotta-600 transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
