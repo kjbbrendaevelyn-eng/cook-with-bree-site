@@ -64,6 +64,19 @@ export interface Recipe extends RecipeFrontmatter {
   imagePath: string | null;
 }
 
+export interface RecipeSummary {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  emoji: string;
+  prepTime: string;
+  cookTime: string;
+  servings: number;
+  imagePath: string | null;
+  source: "site";
+}
+
 export interface Story extends StoryFrontmatter {
   slug: string;
   content: string;
@@ -106,6 +119,29 @@ export async function getAllRecipes(): Promise<Recipe[]> {
   return recipes.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
+}
+
+export function getRecipeSummaries(): RecipeSummary[] {
+  const slugs = getSlugs("recipes");
+  const recipes = slugs.map((slug) => {
+    const fullPath = path.join(contentDirectory, "recipes", `${slug}.md`);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data } = matter(fileContents);
+    const frontmatter = data as RecipeFrontmatter;
+    return {
+      slug,
+      title: frontmatter.title,
+      description: frontmatter.description,
+      category: frontmatter.category,
+      emoji: frontmatter.emoji || "🍽️",
+      prepTime: frontmatter.prepTime,
+      cookTime: frontmatter.cookTime,
+      servings: frontmatter.servings,
+      imagePath: getRecipeImagePath(slug, frontmatter.image),
+      source: "site" as const,
+    };
+  });
+  return recipes.sort((a, b) => a.title.localeCompare(b.title));
 }
 
 export async function getRecipeBySlug(slug: string): Promise<Recipe | null> {
