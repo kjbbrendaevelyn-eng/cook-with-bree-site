@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-12">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <div className="text-center mb-12">
         <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden border-4 border-cream-200 shadow-lg">
           <Image
@@ -22,7 +22,7 @@ export default function AboutPage() {
             priority
           />
         </div>
-        <h1 className="font-display text-4xl md:text-5xl text-warm-brown mt-6">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-warm-brown mt-6">
           Hi, I&apos;m Bree
         </h1>
         <p className="text-lg text-warm-muted mt-4 italic">

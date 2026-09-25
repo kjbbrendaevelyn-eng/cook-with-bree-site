@@ -28,7 +28,7 @@ export default async function EbookPage({ params }: Props) {
   if (!book) notFound();
 
   return (
-    <article className="max-w-3xl mx-auto px-6 py-12">
+    <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <Link
         href="/ebooks"
         className="text-sm text-terracotta-600 hover:text-terracotta-700 transition-colors"
@@ -41,7 +41,7 @@ export default async function EbookPage({ params }: Props) {
         <p className="text-xs font-medium text-terracotta-600 uppercase tracking-wide mt-4">
           {book.format} · {book.pages}
         </p>
-        <h1 className="font-display text-4xl md:text-5xl text-warm-brown leading-tight mt-2">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-warm-brown leading-tight mt-2">
           {book.title}
         </h1>
         <p className="text-lg text-warm-muted mt-4 leading-relaxed">{book.description}</p>

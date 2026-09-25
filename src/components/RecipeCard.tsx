@@ -40,7 +40,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
           {recipe.title}
         </h3>
         <p className="text-sm text-warm-muted mt-2 line-clamp-2">{recipe.description}</p>
-        <div className="flex items-center gap-4 mt-4 text-xs text-warm-muted">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-4 text-xs text-warm-muted">
           <span>⏱ {recipe.prepTime} prep</span>
           <span>🔥 {recipe.cookTime} cook</span>
           <span>🍴 Serves {recipe.servings}</span>

@@ -30,7 +30,7 @@ export default async function RecipePage({ params }: Props) {
   if (!recipe) notFound();
 
   return (
-    <article className="max-w-3xl mx-auto px-6 py-12">
+    <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <Link
         href="/recipes"
         className="text-sm text-terracotta-600 hover:text-terracotta-700 transition-colors"
@@ -63,7 +63,7 @@ export default async function RecipePage({ params }: Props) {
             {recipe.category}
           </span>
         </div>
-        <h1 className="font-display text-4xl md:text-5xl text-warm-brown leading-tight">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-warm-brown leading-tight">
           {recipe.title}
         </h1>
         <p className="text-lg text-warm-muted mt-4">{recipe.description}</p>

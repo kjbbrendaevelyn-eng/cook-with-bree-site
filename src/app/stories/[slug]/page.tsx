@@ -28,7 +28,7 @@ export default async function StoryPage({ params }: Props) {
   if (!story) notFound();
 
   return (
-    <article className="max-w-3xl mx-auto px-6 py-12">
+    <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <Link
         href="/stories"
         className="text-sm text-sage-600 hover:text-sage-500 transition-colors"
@@ -39,7 +39,7 @@ export default async function StoryPage({ params }: Props) {
       <header className="mt-8">
         <span className="text-5xl">{story.emoji || "📖"}</span>
         <p className="text-sm text-warm-muted mt-4">{formatDate(story.date)}</p>
-        <h1 className="font-display text-4xl md:text-5xl text-warm-brown leading-tight mt-2">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-warm-brown leading-tight mt-2">
           {story.title}
         </h1>
         <p className="text-lg text-warm-muted mt-4 italic">{story.description}</p>
