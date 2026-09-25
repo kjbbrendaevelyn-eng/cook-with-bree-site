@@ -22,15 +22,15 @@ export default async function HomePage() {
     <>
       <Hero />
 
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <div className="flex items-end justify-between mb-8">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between mb-8">
           <div>
-            <h2 className="font-display text-3xl text-warm-brown">Latest Recipes</h2>
+            <h2 className="font-display text-2xl sm:text-3xl text-warm-brown">Latest Recipes</h2>
             <p className="text-warm-muted mt-1">Fresh from the kitchen</p>
           </div>
           <Link
             href="/recipes"
-            className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors"
+            className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors shrink-0"
           >
             View all →
           </Link>
@@ -43,15 +43,15 @@ export default async function HomePage() {
       </section>
 
       <section className="bg-cream-100/50 border-y border-cream-200">
-        <div className="max-w-5xl mx-auto px-6 py-16">
-          <div className="flex items-end justify-between mb-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between mb-8">
             <div>
-              <h2 className="font-display text-3xl text-warm-brown">From the Heart</h2>
+              <h2 className="font-display text-2xl sm:text-3xl text-warm-brown">From the Heart</h2>
               <p className="text-warm-muted mt-1">Stories from my kitchen and beyond</p>
             </div>
             <Link
               href="/stories"
-              className="text-sm font-medium text-sage-600 hover:text-sage-500 transition-colors"
+              className="text-sm font-medium text-sage-600 hover:text-sage-500 transition-colors shrink-0"
             >
               Read more →
             </Link>
@@ -64,15 +64,15 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <div className="flex items-end justify-between mb-8">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between mb-8">
           <div>
-            <h2 className="font-display text-3xl text-warm-brown">Printable Meal Plans</h2>
+            <h2 className="font-display text-2xl sm:text-3xl text-warm-brown">Printable Meal Plans</h2>
             <p className="text-warm-muted mt-1">Buy once, print anytime</p>
           </div>
           <Link
             href="/meal-plans"
-            className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors"
+            className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors shrink-0"
           >
             Shop all →
           </Link>
@@ -86,15 +86,15 @@ export default async function HomePage() {
 
       {featuredEbooks.length > 0 && (
         <section className="bg-cream-100/50 border-y border-cream-200">
-          <div className="max-w-5xl mx-auto px-6 py-16">
-            <div className="flex items-end justify-between mb-8">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between mb-8">
               <div>
-                <h2 className="font-display text-3xl text-warm-brown">Downloadable Ebook</h2>
+                <h2 className="font-display text-2xl sm:text-3xl text-warm-brown">Downloadable Ebook</h2>
                 <p className="text-warm-muted mt-1">Stories and recipes in one PDF</p>
               </div>
               <Link
                 href="/ebooks"
-                className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors"
+                className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors shrink-0"
               >
                 Shop ebooks →
               </Link>
@@ -108,15 +108,15 @@ export default async function HomePage() {
         </section>
       )}
 
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <div className="flex items-end justify-between mb-8">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between mb-8">
           <div>
-            <h2 className="font-display text-3xl text-warm-brown">My Kitchen</h2>
+            <h2 className="font-display text-2xl sm:text-3xl text-warm-brown">My Kitchen</h2>
             <p className="text-warm-muted mt-1">Baking and cooking gear I actually use</p>
           </div>
           <Link
             href="/my-kitchen"
-            className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors"
+            className="text-sm font-medium text-terracotta-600 hover:text-terracotta-700 transition-colors shrink-0"
           >
             View all →
           </Link>
@@ -128,9 +128,9 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 py-16 text-center">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
         <span className="text-5xl">👩‍🍳</span>
-        <h2 className="font-display text-3xl text-warm-brown mt-4">
+        <h2 className="font-display text-2xl sm:text-3xl text-warm-brown mt-4">
           Every recipe has a story
         </h2>
         <p className="text-warm-muted mt-3 max-w-lg mx-auto">

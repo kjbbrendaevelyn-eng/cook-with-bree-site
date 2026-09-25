@@ -4,7 +4,7 @@ import SocialLinks from "@/components/SocialLinks";
 export default function Footer() {
   return (
     <footer className="border-t border-cream-200 bg-cream-100 mt-auto">
-      <div className="max-w-5xl mx-auto px-6 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <p className="font-display text-xl text-warm-brown">Cook with Bree</p>

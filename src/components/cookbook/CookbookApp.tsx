@@ -171,12 +171,12 @@ export default function CookbookApp({ siteRecipes }: CookbookAppProps) {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <div className="mb-10 max-w-2xl">
         <p className="text-sm font-medium text-terracotta-600 uppercase tracking-widest mb-3">
           Personal cookbook
         </p>
-        <h1 className="font-display text-4xl text-warm-brown">Cookbook App</h1>
+        <h1 className="font-display text-3xl sm:text-4xl text-warm-brown">Cookbook App</h1>
         <p className="text-warm-muted mt-3 text-lg leading-relaxed">
           Browse Cook with Bree recipes, save your own, and build a weekly meal plan. Your
           personal recipes and plans stay on this device.
@@ -317,7 +317,7 @@ export default function CookbookApp({ siteRecipes }: CookbookAppProps) {
               value={form.description}
               onChange={(v) => setForm((f) => ({ ...f, description: v }))}
             />
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field
                 label="Category"
                 value={form.category}
@@ -329,7 +329,7 @@ export default function CookbookApp({ siteRecipes }: CookbookAppProps) {
                 onChange={(v) => setForm((f) => ({ ...f, emoji: v }))}
               />
             </div>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <Field
                 label="Servings"
                 value={form.servings}

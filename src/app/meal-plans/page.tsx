@@ -12,12 +12,12 @@ export default function MealPlansPage() {
   const plans = getAllMealPlans();
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <div className="mb-12 max-w-2xl">
         <p className="text-sm font-medium text-terracotta-600 uppercase tracking-widest mb-3">
           Shop
         </p>
-        <h1 className="font-display text-4xl text-warm-brown">Printable Meal Plans</h1>
+        <h1 className="font-display text-3xl sm:text-4xl text-warm-brown">Printable Meal Plans</h1>
         <p className="text-warm-muted mt-3 text-lg leading-relaxed">
           Ready-to-print plans with menus, grocery lists, and prep notes — so you can cook with
           less stress and more joy. Buy once, print anytime.

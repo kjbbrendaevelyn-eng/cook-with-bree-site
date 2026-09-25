@@ -34,7 +34,7 @@ export default function BuyButton({ product, className = "" }: BuyButtonProps) {
         <button
           type="button"
           disabled
-          className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full text-sm font-medium bg-cream-200 text-warm-muted cursor-not-allowed"
+        className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full text-sm font-medium bg-cream-200 text-warm-muted cursor-not-allowed text-center whitespace-normal"
         >
           Coming soon — {priceLabel}
         </button>
@@ -51,7 +51,7 @@ export default function BuyButton({ product, className = "" }: BuyButtonProps) {
         href={purchaseUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full text-sm font-medium bg-terracotta-500 text-white hover:bg-terracotta-600 transition-colors"
+        className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full text-sm font-medium bg-terracotta-500 text-white hover:bg-terracotta-600 transition-colors text-center whitespace-normal"
       >
         {ctaLabel}
       </a>
