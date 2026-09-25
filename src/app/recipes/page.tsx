@@ -12,9 +12,9 @@ export default async function RecipesPage() {
   const categories = [...new Set(recipes.map((r) => r.category))];
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <div className="mb-12">
-        <h1 className="font-display text-4xl text-warm-brown">All Recipes</h1>
+        <h1 className="font-display text-3xl sm:text-4xl text-warm-brown">All Recipes</h1>
         <p className="text-warm-muted mt-2 text-lg">
           {recipes.length} recipes to fill your table with warmth
         </p>

@@ -11,9 +11,9 @@ export default async function StoriesPage() {
   const stories = await getAllStories();
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <div className="mb-12">
-        <h1 className="font-display text-4xl text-warm-brown">Stories</h1>
+        <h1 className="font-display text-3xl sm:text-4xl text-warm-brown">Stories</h1>
         <p className="text-warm-muted mt-2 text-lg">
           The memories, moments, and meaning behind the meals
         </p>
