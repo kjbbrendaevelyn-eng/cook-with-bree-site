@@ -14,7 +14,7 @@ export default function CookbookPage() {
 
   return (
     <>
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
         <PwaInstallHint />
       </div>
       <CookbookApp siteRecipes={siteRecipes} />

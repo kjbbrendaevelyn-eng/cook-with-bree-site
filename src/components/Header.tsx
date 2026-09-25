@@ -7,8 +7,6 @@ const navLinks = [
   { href: "/recipes", label: "Recipes" },
   { href: "/stories", label: "Stories" },
   { href: "/cookbook", label: "Cookbook" },
-  { href: "/meal-plans", label: "Meal Plans" },
-  { href: "/ebooks", label: "Ebooks" },
   { href: "/my-kitchen", label: "My Kitchen" },
   { href: "/about", label: "About" },
 ];
@@ -25,7 +23,11 @@ export default function Header() {
     }
 
     document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   useEffect(() => {
@@ -40,24 +42,28 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="border-b border-cream-200 bg-cream-50/80 backdrop-blur-sm sticky top-0 z-50">
-      <div className="max-w-5xl mx-auto px-4 py-4 lg:px-6 lg:py-5">
-        <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="group min-w-0" onClick={() => setOpen(false)}>
-            <span className="font-display text-xl sm:text-2xl text-warm-brown group-hover:text-terracotta-600 transition-colors">
+    <header className="border-b border-cream-200 bg-cream-50/95 backdrop-blur-sm sticky top-0 z-50 pt-[env(safe-area-inset-top)] overflow-x-clip">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 lg:py-5">
+        <div className="flex items-center justify-between gap-3 min-w-0">
+          <Link
+            href="/"
+            className="group min-w-0 flex-1 mr-2"
+            onClick={() => setOpen(false)}
+          >
+            <span className="font-display text-lg sm:text-2xl text-warm-brown group-hover:text-terracotta-600 transition-colors truncate block">
               Cook with Bree
             </span>
-            <span className="block text-xs text-warm-muted tracking-widest uppercase mt-0.5">
+            <span className="hidden sm:block text-xs text-warm-muted tracking-widest uppercase mt-0.5">
               Recipes & Stories
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8" aria-label="Main">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-6 shrink-0" aria-label="Main">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-warm-muted hover:text-terracotta-600 transition-colors"
+                className="text-sm font-medium text-warm-muted hover:text-terracotta-600 transition-colors whitespace-nowrap"
               >
                 {link.label}
               </Link>
@@ -66,7 +72,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="lg:hidden inline-flex items-center justify-center h-11 w-11 rounded-full border border-cream-200 text-warm-brown hover:bg-cream-100 transition-colors"
+            className="lg:hidden inline-flex items-center justify-center h-11 w-11 shrink-0 rounded-full border border-cream-200 bg-white text-warm-brown hover:bg-cream-100 transition-colors"
             aria-expanded={open}
             aria-controls={menuId}
             aria-label={open ? "Close menu" : "Open menu"}
@@ -101,15 +107,17 @@ export default function Header() {
         <nav
           id={menuId}
           aria-label="Main"
-          className={`lg:hidden ${open ? "block" : "hidden"}`}
+          className={`lg:hidden overflow-x-hidden pb-[env(safe-area-inset-bottom)] ${
+            open ? "block" : "hidden"
+          }`}
         >
-          <ul className="mt-4 pt-2 border-t border-cream-200 flex flex-col">
+          <ul className="mt-3 pt-2 border-t border-cream-200 flex flex-col max-h-[min(80vh,calc(100dvh-4rem))] overflow-y-auto">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 text-base font-medium text-warm-muted hover:text-terracotta-600 transition-colors"
+                  className="block py-3.5 text-base font-medium text-warm-brown border-b border-cream-200 last:border-b-0 hover:text-terracotta-600 transition-colors"
                 >
                   {link.label}
                 </Link>
