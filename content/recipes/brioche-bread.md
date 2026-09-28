@@ -5,7 +5,7 @@ date: "2026-08-17"
 prepTime: "45 min"
 cookTime: "35-45 min"
 servings: 16
-category: "Baking"
+category: "Bread"
 tags: ["bread", "brioche", "two-day recipe"]
 featured: true
 emoji: "🥐"

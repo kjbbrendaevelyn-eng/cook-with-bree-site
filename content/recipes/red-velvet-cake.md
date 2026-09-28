@@ -5,7 +5,7 @@ date: "2026-09-21"
 prepTime: "30 min"
 cookTime: "30 min"
 servings: 12
-category: "Dessert"
+category: "Cakes"
 tags: ["cake", "dessert", "baking", "celebration", "cream cheese"]
 featured: true
 emoji: "❤️"

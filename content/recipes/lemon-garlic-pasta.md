@@ -5,7 +5,7 @@ date: "2026-02-15"
 prepTime: "10 min"
 cookTime: "15 min"
 servings: 4
-category: "Pasta"
+category: "Main"
 tags: ["quick", "weeknight", "vegetarian"]
 featured: true
 emoji: "🍝"

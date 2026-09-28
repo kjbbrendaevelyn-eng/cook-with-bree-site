@@ -5,7 +5,7 @@ date: "2026-09-01"
 prepTime: "30 min"
 cookTime: "35 min"
 servings: 12
-category: "Baking"
+category: "Bread"
 tags: ["bread", "sandwich", "yeast bread"]
 featured: true
 emoji: "🍞"

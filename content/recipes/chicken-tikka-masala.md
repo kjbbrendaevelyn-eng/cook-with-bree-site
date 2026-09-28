@@ -14,6 +14,7 @@ emoji: "🍗"
 ## Ingredients
 
 ### For the chicken
+
 - 1 1/2 lb (about 700 g) boneless chicken thighs or breasts, cut into bite-size pieces
 - 1/2 cup plain yogurt
 - 1 tbsp lemon juice
@@ -26,6 +27,7 @@ emoji: "🍗"
 - 1 tsp salt
 
 ### For the masala sauce
+
 - 2 tbsp butter or ghee (or vegetable oil)
 - 1 large onion, finely chopped
 - 3 cloves garlic, minced
@@ -37,9 +39,10 @@ emoji: "🍗"
 - 1 tsp paprika
 - 1/2 tsp chili powder or cayenne (optional, to taste)
 - 3/4 cup heavy cream or full fat coconut milk
-- 1 tsp sugar (optional, to balance acidity)
 - Salt, to taste
 - Fresh cilantro, chopped, for serving
+
+
 
 ## Instructions
 
@@ -50,6 +53,8 @@ emoji: "🍗"
 5. Add crushed tomatoes, garam masala, cumin, paprika, and chili powder (if using). Simmer **8–10 minutes**, stirring occasionally, until the sauce thickens and deepens in color.
 6. **Finish:** Stir in cream (or coconut milk) and sugar if using. Return the chicken and any juices to the pan. Simmer gently **8–10 minutes**, until the chicken is cooked through and the sauce is silky. Season with salt.
 7. **Serve:** Spoon over basmati or coconut rice, or with warm naan or chapati. Top with fresh cilantro.
+
+
 
 ## Bree's Notes
 

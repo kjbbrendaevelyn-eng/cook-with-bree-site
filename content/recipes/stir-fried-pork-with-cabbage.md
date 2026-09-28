@@ -13,15 +13,13 @@ emoji: "🥬"
 
 ## Ingredients
 
-- 1 lb (about 450 g) pork tenderloin or boneless pork chops, thinly sliced
+- 1 lb (about 450 g) pork tenderloin or boneless pork chops, cubed
 - 1/2 medium head green cabbage, shredded (about 4–5 cups)
 - 1 medium onion, thinly sliced
 - 3 cloves garlic, minced
 - 1 tbsp fresh ginger, grated (optional)
 - 2 tbsp vegetable oil
-- 2 tbsp soy sauce
 - 1 tbsp oyster sauce (optional, for deeper savoriness)
-- 1 tsp sesame oil (optional)
 - 1/2 tsp black pepper
 - 1/4 tsp chili flakes (optional)
 - Salt, to taste
@@ -37,6 +35,8 @@ emoji: "🥬"
 5. Add cabbage with a pinch of salt. Stir-fry until wilted but still a little crisp, about **4–6 minutes**.
 6. **Combine:** Return the pork to the pan. Add remaining soy sauce, oyster sauce (if using), sesame oil, and chili flakes. Toss everything together for **1–2 minutes** until glossy and hot. Taste and adjust salt or soy.
 7. **Serve:** Spoon over rice and finish with green onions.
+
+
 
 ## Bree's Notes
 

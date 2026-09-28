@@ -5,7 +5,7 @@ date: "2026-08-28"
 prepTime: "20 min"
 cookTime: "25 min"
 servings: 14
-category: "Sides"
+category: "Bread"
 tags: ["Ugandan", "bread", "family recipe"]
 featured: true
 emoji: "🫓"
