@@ -18,6 +18,7 @@ export const contentManifest = {
   "mushroom-sauce",
   "oatmeal-raisin-cookies",
   "one-pot-chicken-alfredo-pasta",
+  "orange-cookies",
   "pan-made-pizza",
   "pork-curry",
   "red-velvet-cake",
