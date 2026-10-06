@@ -32,9 +32,11 @@ export const contentManifest = {
   "chapati-and-rolex",
   "first-kitchen-memory",
   "growing-up-in-uganda",
+  "lecture-halls-and-runways",
   "living-with-my-cousin",
   "my-parents-love",
   "my-sister-salma",
+  "nothing-goes-to-waste",
   "thirty-days",
   "through-the-ceiling",
   "why-i-cook"
