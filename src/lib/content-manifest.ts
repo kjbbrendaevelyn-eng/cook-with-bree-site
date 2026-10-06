@@ -13,6 +13,7 @@ export const contentManifest = {
   "grandmas-banana-bread",
   "honey-roasted-vegetables",
   "lemon-garlic-pasta",
+  "lemon-tea-cookies",
   "matooke-with-groundnut-sauce",
   "mushroom-sauce",
   "oatmeal-raisin-cookies",
@@ -23,7 +24,7 @@ export const contentManifest = {
   "roasted-beef-luwombo",
   "sandwich-bread",
   "stir-fried-pork-with-cabbage"
-],
+ ],
   stories: [
   "a-day-later",
   "chapati-and-rolex",
