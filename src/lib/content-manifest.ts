@@ -23,8 +23,9 @@ export const contentManifest = {
   "red-velvet-cake",
   "roasted-beef-luwombo",
   "sandwich-bread",
-  "stir-fried-pork-with-cabbage"
- ],
+  "stir-fried-pork-with-cabbage",
+  "thumbprint-cookies"
+],
   stories: [
   "a-day-later",
   "chapati-and-rolex",
