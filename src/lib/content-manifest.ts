@@ -26,7 +26,8 @@ export const contentManifest = {
   "roasted-beef-luwombo",
   "sandwich-bread",
   "stir-fried-pork-with-cabbage",
-  "thumbprint-cookies"
+  "thumbprint-cookies",
+  "vanilla-cake"
 ],
   stories: [
   "a-day-later",
