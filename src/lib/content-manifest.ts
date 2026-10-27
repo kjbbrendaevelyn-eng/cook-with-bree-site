@@ -6,6 +6,7 @@ export const contentManifest = {
   "butter-chicken",
   "chapati",
   "chicken-tikka-masala",
+  "chocolate-cake",
   "coconut-rice",
   "cozy-chicken-soup",
   "croissants",
