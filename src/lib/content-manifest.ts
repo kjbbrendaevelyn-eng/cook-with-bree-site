@@ -11,6 +11,7 @@ export const contentManifest = {
   "english-peas-stew",
   "grandmas-banana-bread",
   "honey-roasted-vegetables",
+  "italian-meatballs",
   "lemon-garlic-pasta",
   "matooke-with-groundnut-sauce",
   "mushroom-sauce",
