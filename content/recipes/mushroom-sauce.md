@@ -5,7 +5,7 @@ date: "2026-09-07"
 prepTime: "10 min"
 cookTime: "25 min"
 servings: 4
-category: "Sides"
+category: "Sauces"
 tags: ["vegetarian", "sauce", "comfort food", "quick"]
 featured: true
 emoji: "🍄"

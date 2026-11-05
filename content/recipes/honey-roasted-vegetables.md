@@ -5,7 +5,7 @@ date: "2026-01-10"
 prepTime: "15 min"
 cookTime: "40 min"
 servings: 6
-category: "Sides"
+category: "Main"
 tags: ["vegetarian", "holiday", "easy"]
 featured: false
 emoji: "🥕"

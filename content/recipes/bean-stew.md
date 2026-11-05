@@ -24,10 +24,8 @@ emoji: "🫘"
 - 1 tsp curry powder
 - 1/2 tsp ground cumin
 - 1/2 tsp paprika
-- 1/4 tsp cayenne or chili flakes (optional)
 - 2 cups water or vegetable stock
 - Salt and black pepper, to taste
-- Fresh cilantro or parsley, for serving
 
 ## Instructions
 
@@ -40,6 +38,8 @@ emoji: "🫘"
 7. **Taste and finish:** Adjust salt and pepper. For a creamier gravy, mash a spoonful of beans against the side of the pot and stir them back in.
 8. **Serve:** Ladle over rice, next to matooke, or with warm chapati. Top with fresh herbs.
 
+
+
 ## Bree's Notes
 
-Bean stew is pure home cooking — the kind of pot that quietly feeds everyone without asking for attention. Canned beans make it a weeknight win; dried beans you cooked ahead taste even better. Don't rush the onions — that golden base is the whole gravy. Leftovers thicken overnight and are excellent the next day with a fried egg on top.
+Bean stew is pure home cooking — the kind of pot that quietly feeds everyone without asking for attention. Canned beans make it a weeknight win; dried beans you cooked ahead taste even better. Don't rush the onions — that golden base is the whole gravy. Leftovers thicken overnight and are excellent the next day.

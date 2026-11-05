@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Recipe } from "@/lib/content";
 import { formatDate } from "@/lib/content";
+import { getRecipeCategory } from "@/lib/recipe-categories";
 
 interface RecipeCardProps {
   recipe: Recipe;
@@ -30,7 +31,11 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
       </div>
       <div className="p-6">
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-xs font-medium text-terracotta-600 uppercase tracking-wide">
+          <span
+            className={`text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${
+              getRecipeCategory(recipe.category)?.chip ?? "bg-cream-200 text-terracotta-600"
+            }`}
+          >
             {recipe.category}
           </span>
           <span className="text-warm-muted/40">·</span>

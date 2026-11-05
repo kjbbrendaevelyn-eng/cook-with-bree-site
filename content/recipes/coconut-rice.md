@@ -5,7 +5,7 @@ date: "2026-09-07"
 prepTime: "10 min"
 cookTime: "30 min"
 servings: 6
-category: "Sides"
+category: "Main"
 tags: ["rice cooker", "easy", "vegetarian", "comfort food"]
 featured: true
 emoji: "🥥"

@@ -14,6 +14,7 @@ export const contentManifest = {
   "english-peas-stew",
   "grandmas-banana-bread",
   "honey-roasted-vegetables",
+  "italian-meatballs",
   "lemon-blueberry-cake",
   "lemon-garlic-pasta",
   "lemon-tea-cookies",

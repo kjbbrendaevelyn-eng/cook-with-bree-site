@@ -14,13 +14,15 @@ emoji: "🍕"
 ## Ingredients
 
 ### Dough
+
 - 2 cups (250 g) all-purpose flour, plus more for dusting
 - 1 tsp instant yeast
 - 1 tsp salt
-- 3/4 cup (180 ml) warm water
-- 1 tbsp olive oil, plus more for the pan
+- 3/4 cup (180 ml) warm milk
+- 3 tbsp olive oil, plus more for the pan
 
 ### Sauce & toppings
+
 - 1/2 cup pizza sauce or crushed tomatoes
 - 1–1 1/2 cups shredded mozzarella
 - Toppings of choice: pepperoni, cooked sausage, mushrooms, peppers, onions, olives
@@ -37,6 +39,8 @@ emoji: "🍕"
 5. **Top:** Spread sauce over the dough, leaving a small border. Add cheese and toppings. Sprinkle oregano, salt, and pepper.
 6. **Finish:** Cover the pan with a lid (or foil). Cook over medium-low heat for **8–12 minutes**, until the cheese is melted and the bottom is crisp and deep golden. If the top needs more melt, cover tightly for the last few minutes.
 7. **Serve:** Slide onto a cutting board, rest **1–2 minutes**, slice, and finish with basil or chili flakes if you like.
+
+
 
 ## Bree's Notes
 

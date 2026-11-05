@@ -5,7 +5,7 @@ date: "2026-01-28"
 prepTime: "15 min"
 cookTime: "60 min"
 servings: 10
-category: "Baking"
+category: "Bread"
 tags: ["comfort food", "breakfast", "family recipe"]
 featured: true
 emoji: "🍌"

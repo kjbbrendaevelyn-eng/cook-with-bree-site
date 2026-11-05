@@ -5,7 +5,7 @@ date: "2026-02-01"
 prepTime: "20 min"
 cookTime: "45 min"
 servings: 6
-category: "Soup"
+category: "Soups"
 tags: ["comfort food", "one pot", "meal prep"]
 featured: true
 emoji: "🍲"
