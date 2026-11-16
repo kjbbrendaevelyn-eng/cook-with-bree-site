@@ -34,7 +34,6 @@ emoji: "🥟"
 - 1/4 tsp turmeric
 - 1/2 tsp salt
 - 1/2 tsp chili powder, or 1 green chili, finely chopped (optional)
-- 1 tbsp lemon juice
 - 2 tbsp chopped cilantro
 
 ### Beef filling
@@ -50,7 +49,6 @@ emoji: "🥟"
 - 1/4 tsp turmeric
 - 1/2 tsp salt
 - 1/4 tsp black pepper
-- 1 tbsp lemon juice
 - 2 tbsp chopped cilantro
 
 ### To fry
@@ -61,8 +59,8 @@ emoji: "🥟"
 
 1. **Make the dough:** Stir the flour and salt together. Rub in the oil until the flour looks like damp sand. Add the warm water and knead 2–3 minutes into a firm, smooth dough. It should not stick to the bowl. Cover and rest **20 minutes**.
 2. **Cook the potatoes:** Boil the potatoes in salted water until just tender, about **8 minutes**. Drain well. Stir in the peas so the heat warms them through. The potatoes should stay in pieces.
-3. **Season the vegetables:** Heat 1 tbsp oil in a skillet over medium heat. Cook the onion until soft, about **4 minutes**. Add the ginger and garlic and cook **30 seconds**. Stir in the cumin, coriander, garam masala, turmeric, salt, and chili if you are using it. Fold in the potatoes and peas and cook **2 minutes**, pressing just enough to crush a few cubes. Take the pan off the heat. Stir in the lemon juice and cilantro. Cool until you can handle it.
-4. **Cook the beef:** Heat 1 tbsp oil in a skillet over medium heat. Cook the onion until soft, about **4 minutes**. Add the ginger and garlic and cook **30 seconds**. Add the beef, cumin, coriander, garam masala, turmeric, salt, and pepper. Cook, breaking the meat up, until no pink remains, about **6–8 minutes**. Spoon off any liquid or extra fat so the filling is dry. Take the pan off the heat. Stir in the lemon juice and cilantro. Cool.
+3. **Season the vegetables:** Heat 1 tbsp oil in a skillet over medium heat. Cook the onion until soft, about **4 minutes**. Add the ginger and garlic and cook **30 seconds**. Stir in the cumin, coriander, garam masala, turmeric, salt, and chili if you are using it. Fold in the potatoes and peas and cook **2 minutes**, pressing just enough to crush a few cubes. Take the pan off the heat. Stir in the cilantro. Cool until you can handle it.
+4. **Cook the beef:** Heat 1 tbsp oil in a skillet over medium heat. Cook the onion until soft, about **4 minutes**. Add the ginger and garlic and cook **30 seconds**. Add the beef, cumin, coriander, garam masala, turmeric, salt, and pepper. Cook, breaking the meat up, until no pink remains, about **6–8 minutes**. Spoon off any liquid or extra fat so the filling is dry. Take the pan off the heat. Stir in the cilantro. Cool.
 5. **Shape:** Divide the dough into 8 balls. Roll each into a thin oval, about 6 inches (15 cm) long, and cut it in half across the middle. You will have 16 halves. Take one half, wet the straight edge with water, and form a cone. Fill 8 cones with the vegetable mixture and 8 with the beef, leaving a little room at the top. Wet the open edges and pinch them shut. Press the seam flat so it does not open in the oil.
 6. **Fry:** Heat the oil to 350°F (175°C). A crumb of dough should sizzle and rise slowly. Fry in batches, turning, until the pastry is deep gold and crisp, about **4–6 minutes**. Lift onto a rack. The oil should stay hot between batches so the next ones do not drink it up.
 7. **Serve:** Eat warm. The vegetable and beef samosas look the same once they are fried, so set them on separate plates.
