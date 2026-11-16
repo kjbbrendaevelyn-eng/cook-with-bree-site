@@ -36,6 +36,7 @@ export const contentManifest = {
 ],
   stories: [
   "a-day-later",
+  "a-name-for-the-kitchen",
   "chapati-and-rolex",
   "first-kitchen-memory",
   "growing-up-in-uganda",
