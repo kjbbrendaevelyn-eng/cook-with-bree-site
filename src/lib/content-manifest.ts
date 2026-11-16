@@ -28,6 +28,7 @@ export const contentManifest = {
   "pork-curry",
   "red-velvet-cake",
   "roasted-beef-luwombo",
+  "samosas",
   "sandwich-bread",
   "stir-fried-pork-with-cabbage",
   "thumbprint-cookies",
