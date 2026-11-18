@@ -46,6 +46,7 @@ export const contentManifest = {
   "my-parents-love",
   "my-sister-salma",
   "nothing-goes-to-waste",
+  "the-recipe-leaves-the-room",
   "thirty-days",
   "through-the-ceiling",
   "why-i-cook"
