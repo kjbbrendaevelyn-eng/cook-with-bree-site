@@ -23,7 +23,7 @@ The people I can still see come first. Jordan, Elli, and Riley, and the person I
 
 Then the page has to travel.
 
-Someone in their own kitchen, with their own pot, reading what I wrote and deciding to trust it. I picture them the way I stood at my mother's stove, and later at that hostel burner: wanting the food to turn out, willing to try. The small sentences are the hospitality. Heat the pan. Salt the water. Rest the dough until it rolls. Eat it warm. If the middle is still pale, give it another minute. A recipe is a door left open in words.
+Someone in their own kitchen, with their own pot, reading what I wrote and deciding to trust it. I picture them the way I stood at my mother's stove, and later at that hostel burner: wanting the food to turn out, willing to try. The small sentences are the hospitality. Heat the pan. Salt the water. Rest the dough until it rose. Eat it warm. If the middle is still pale, give it another minute. A recipe is a door left open in words.
 
 Some nights I still eat standing up. The workday runs long. Spreadsheets, messages, a mind that will not sit down. Elli is close to the counter. Riley needs holding. Jordan comes in when the food is ready. Cooking on those nights is the same offer I make on the page. This house is worth feeding.
 
