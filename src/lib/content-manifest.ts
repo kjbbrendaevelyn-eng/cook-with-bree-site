@@ -18,6 +18,7 @@ export const contentManifest = {
   "lemon-blueberry-cake",
   "lemon-garlic-pasta",
   "lemon-tea-cookies",
+  "mandazi",
   "matooke-with-groundnut-sauce",
   "moist-lemon-cake",
   "mushroom-sauce",
